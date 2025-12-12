@@ -404,17 +404,6 @@ source.ip | firewall_bytes              | threat_count
 10.0.0.2  | SUM(bytes WHERE _source=fw) | COUNT(WHERE _source=threat)
 10.0.0.3  | SUM(bytes WHERE _source=fw) | COUNT(WHERE _source=threat)
 ```
-
-### Performance Comparison
-
-| Aspect | Traditional JOIN | ES|QL Joinless |
-|--------|-----------------|----------------|
-| **Data Passes** | 2+ (one per table, then join) | 1 (read all, aggregate once) |
-| **Memory** | High (must store join results) | Lower (streaming aggregation) |
-| **Complexity** | O(n*m) in worst case | O(n+m) |
-| **Scalability** | Degrades with more tables | Scales linearly |
-| **NULL Handling** | Explicit (COALESCE, IFNULL) | Implicit (conditional COUNT) |
-
 ---
 
 ## Advanced Techniques
