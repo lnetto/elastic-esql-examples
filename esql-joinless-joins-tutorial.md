@@ -553,7 +553,3 @@ GROUP BY common_field
 **Resources:**
 - [ES|QL Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/esql.html)
 - [ES|QL Functions Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-functions-operators.html)
-
----
-
-*Tutorial Version: 1.1 | December 2024 | Tested on Kibana 8.11+*
